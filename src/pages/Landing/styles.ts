@@ -4,10 +4,6 @@ interface VerticalLineProps {
   small?: boolean;
 }
 
-interface SideColumnProps {
-  reverse?: boolean;
-}
-
 export const VerticalLine = styled.hr`
   border: 1px solid #d2d2d2;
   border-radius: 10px;
@@ -28,12 +24,6 @@ export const SideColumn = styled.div`
   align-items: center;
   justify-content: space-evenly;
   background-color: #111111;
-
-  ${(props: SideColumnProps) =>
-    props.reverse &&
-    css`
-      flex-direction: column-reverse;
-    `}
 `;
 
 export const MainContainer = styled.main`

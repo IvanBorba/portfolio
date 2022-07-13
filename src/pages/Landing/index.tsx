@@ -9,23 +9,33 @@ import {
   VerticalLine,
 } from "./styles";
 
+interface IconsStyle {
+  color: string;
+  cursor: string;
+}
+
 const LandingPage = () => {
+  const iconsStyle: IconsStyle = {
+    color: "#d2d2d2",
+    cursor: "pointer",
+  };
+
   return (
     <>
       <Header />
       <MainContainer>
         <SideColumn>
-          <VerticalLine style={{ margin: 0 }} />
-          <VscGithub />
-          <IoLogoLinkedin />
           <VerticalLine small />
+          <VscGithub style={iconsStyle} size={40} />
+          <IoLogoLinkedin style={iconsStyle} size={40} />
+          <VerticalLine />
         </SideColumn>
         <InfoContainer></InfoContainer>
         <SideColumn>
+          <VerticalLine />
+          <IoMailOutline style={iconsStyle} size={40} />
+          <IoLogoWhatsapp style={iconsStyle} size={40} />
           <VerticalLine small />
-          <IoMailOutline />
-          <IoLogoWhatsapp />
-          <VerticalLine style={{ margin: 0 }} />
         </SideColumn>
       </MainContainer>
     </>
