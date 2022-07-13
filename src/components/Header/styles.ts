@@ -12,8 +12,8 @@ export const StyledHeader = styled.header`
 
   h1 {
     color: #d2d2d2;
-    font-size: 16px;
-    letter-spacing: 1px;
+    font-size: 20px;
+    letter-spacing: 2px;
     font-weight: 400;
     user-select: none;
   }
