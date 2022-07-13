@@ -1,6 +1,4 @@
 import Header from "../../components/Header";
-import { HorizontalLine } from "./styles";
-import "./styles.ts";
 
 const LandingPage = () => {
   return (
