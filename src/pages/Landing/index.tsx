@@ -94,8 +94,8 @@ const LandingPage = () => {
           <HorizontalLine />
           <p>
             I'm Ivan Gabriel de Borba, a {new Date().getFullYear() - 1996} year
-            old Brazilian Web Developer, passionated about mathematics, nature,
-            patterns, technology, music, games and much more.
+            old Brazilian Web Developer passionated about technology,
+            mathematics, nature, patterns, music, games and much more.
             <br />
             <br />
             Follow me on{" "}
