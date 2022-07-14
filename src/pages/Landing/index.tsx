@@ -15,9 +15,18 @@ import {
   ScrollCta,
   SideColumn,
   VerticalLine,
+  SecondSectionContainer,
+  AboutMeContainer,
+  StyledTitle,
+  HorizontalLine,
+  MyStacksContainer,
+  TechIconsContainer,
+  TechCard,
 } from "./styles";
 
 import profileImage from "../../assets/images/profile.jpg";
+
+import * as TechIcons from "../../assets/icons";
 
 interface ContactIconsStyle {
   color: string;
@@ -46,9 +55,9 @@ const LandingPage = () => {
         </SideColumn>
         <ProfileContainer>
           <InfoContainer>
-            <h1>
+            <StyledTitle>
               Hey, I'm <strong>Ivan</strong>
-            </h1>
+            </StyledTitle>
             <h3>Full Stack Developer + Teacher</h3>
             <p>
               I'm a Full Stack Developer based in Brazil. <br />
@@ -71,9 +80,78 @@ const LandingPage = () => {
           <VerticalLine small />
         </SideColumn>
         <ScrollCta>
-          Scroll down <br /> <IoCaretDown size={20} />
+          Scroll down
+          <br />
+          <IoCaretDown size={20} />
         </ScrollCta>
       </MainContainer>
+      <SecondSectionContainer>
+        <AboutMeContainer>
+          <StyledTitle>
+            About <strong>me</strong>
+            <span>.</span>
+          </StyledTitle>
+          <HorizontalLine />
+          <p>
+            I'm Ivan Gabriel de Borba, a {new Date().getFullYear() - 1996} year
+            old Brazilian Web Developer, passionated about mathematics, nature,
+            patterns, technology, music, games and much more.
+            <br />
+            <br />
+            Follow me on{" "}
+            <a href="https://open.spotify.com/user/mr_borba?si=d9ef676df3bf4c0d">
+              Spotify
+            </a>{" "}
+            to see what I'm listening, or add me on{" "}
+            <a href="https://steamcommunity.com/id/Ivanplays666/">Steam</a> so
+            we can enjoy some games together.
+            <br />
+            <br />
+            Studying about software development since february 2020, I'm focused
+            on keeping learning everyday through reading, coding, watching live
+            codes and teaching what I've already learned.
+          </p>
+        </AboutMeContainer>
+        <MyStacksContainer>
+          <StyledTitle>
+            <strong>My </strong>Stacks
+            <span>.</span>
+          </StyledTitle>
+          <HorizontalLine position="right" />
+          <TechIconsContainer>
+            <TechCard shadowColor="yellow">
+              <TechIcons.JavascriptIcon />
+            </TechCard>
+            <TechCard shadowColor="blue">
+              <TechIcons.TypescriptIcon />
+            </TechCard>
+            <TechCard shadowColor="orange">
+              <TechIcons.HtmlIcon />
+            </TechCard>
+            <TechCard shadowColor="blue">
+              <TechIcons.CssIcon />
+            </TechCard>
+            <TechCard shadowColor="blue">
+              <TechIcons.ReactIcon />
+            </TechCard>
+            <TechCard shadowColor="green">
+              <TechIcons.NodeIcon />
+            </TechCard>
+            <TechCard shadowColor="red">
+              <TechIcons.NestIcon />
+            </TechCard>
+            <TechCard shadowColor="blue">
+              <TechIcons.PostgresIcon />
+            </TechCard>
+            <TechCard shadowColor="green">
+              <TechIcons.MongoIcon />
+            </TechCard>
+            <TechCard shadowColor="orange">
+              <TechIcons.GitIcon />
+            </TechCard>
+          </TechIconsContainer>
+        </MyStacksContainer>
+      </SecondSectionContainer>
     </>
   );
 };
