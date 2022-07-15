@@ -125,7 +125,8 @@ export const SecondSectionContainer = styled.section`
 
 export const AboutMeContainer = styled.div`
   width: 64vw;
-  height: 58vh;
+  height: 40vh;
+  margin-bottom: 12vh;
   display: flex;
   flex-direction: column;
 
@@ -137,10 +138,20 @@ export const AboutMeContainer = styled.div`
     font-weight: lighter;
     line-height: 140%;
 
-    a {
+    .spotify-link {
       text-decoration: none;
       font-weight: normal;
       color: #0bd659;
+    }
+
+    .steam-link {
+      text-decoration: none;
+      font-weight: normal;
+      color: #146fc2;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 `;
@@ -148,7 +159,7 @@ export const AboutMeContainer = styled.div`
 export const HorizontalLine = styled.hr`
   width: 5vw;
   border: 2px solid #146fc2;
-  margin-bottom: 6vh;
+  margin-bottom: 4vh;
 
   ${(props: HorizontalLineProps) =>
     props.position === "center" &&
@@ -169,6 +180,7 @@ export const MyStacksContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
+  margin-bottom: 10vh;
 `;
 
 export const TechIconsContainer = styled.div`
@@ -223,4 +235,21 @@ export const TechCard = styled.div`
     css`
       box-shadow: 0 8px 24px 0 rgba(223, 35, 79, 0.25);
     `};
+`;
+
+export const ProjectsContainer = styled.div`
+  width: 64vw;
+  height: 64vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  p {
+    width: 65vw;
+    color: #d2d2d2;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    line-height: 140%;
+  }
 `;
