@@ -23,35 +23,30 @@ import {
   TechIconsContainer,
   TechCard,
   ProjectsContainer,
+  IconContainer,
 } from "./styles";
 
 import profileImage from "../../assets/images/profile.jpg";
 
 import * as TechIcons from "../../assets/icons";
-
-interface ContactIconsStyle {
-  color: string;
-  cursor: string;
-}
+import Footer from "../../components/Footer";
 
 const LandingPage = () => {
-  const contactIconsStyle: ContactIconsStyle = {
-    color: "#d2d2d2",
-    cursor: "pointer",
-  };
-
   return (
     <>
       <Header />
       <MainContainer>
         <SideColumn>
           <VerticalLine small />
-          <a href="https://github.com/IvanBorba" target="_blank">
-            <VscGithub style={contactIconsStyle} size={40} />
-          </a>
-          <a href="https://www.linkedin.com/in/ivan-borba/" target="_blank">
-            <IoLogoLinkedin style={contactIconsStyle} size={40} />
-          </a>
+          <IconContainer href="https://github.com/IvanBorba" target="_blank">
+            <VscGithub size={40} color="#d2d2d2" />
+          </IconContainer>
+          <IconContainer
+            href="https://www.linkedin.com/in/ivan-borba/"
+            target="_blank"
+          >
+            <IoLogoLinkedin size={40} color="#d2d2d2" />
+          </IconContainer>
           <VerticalLine />
         </SideColumn>
         <ProfileContainer>
@@ -72,12 +67,12 @@ const LandingPage = () => {
         </ProfileContainer>
         <SideColumn>
           <VerticalLine />
-          <a href="mailto: mrborbaivan@gmail.com">
-            <IoMailOutline style={contactIconsStyle} size={40} />
-          </a>
-          <a href="https://wa.me/5547991114205" target="_blank">
-            <IoLogoWhatsapp style={contactIconsStyle} size={40} />
-          </a>
+          <IconContainer href="mailto: mrborbaivan@gmail.com">
+            <IoMailOutline size={40} color="#d2d2d2" />
+          </IconContainer>
+          <IconContainer href="https://wa.me/5547991114205" target="_blank">
+            <IoLogoWhatsapp size={40} color="#d2d2d2" />
+          </IconContainer>
           <VerticalLine small />
         </SideColumn>
         <ScrollCta>
@@ -172,6 +167,7 @@ const LandingPage = () => {
           <p>Some of my favourites (and best) projects</p>
         </ProjectsContainer>
       </SecondSectionContainer>
+      <Footer />
     </>
   );
 };

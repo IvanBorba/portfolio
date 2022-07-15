@@ -253,3 +253,11 @@ export const ProjectsContainer = styled.div`
     line-height: 140%;
   }
 `;
+
+export const IconContainer = styled.a`
+  cursor: pointer;
+
+  &:first-child {
+    color: "#d2d2d2";
+  }
+`;
