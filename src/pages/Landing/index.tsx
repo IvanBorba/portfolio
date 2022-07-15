@@ -22,6 +22,7 @@ import {
   MyStacksContainer,
   TechIconsContainer,
   TechCard,
+  ProjectsContainer,
 } from "./styles";
 
 import profileImage from "../../assets/images/profile.jpg";
@@ -85,7 +86,7 @@ const LandingPage = () => {
           <IoCaretDown size={20} />
         </ScrollCta>
       </MainContainer>
-      <SecondSectionContainer>
+      <SecondSectionContainer id="about">
         <AboutMeContainer>
           <StyledTitle>
             About <strong>me</strong>
@@ -99,12 +100,22 @@ const LandingPage = () => {
             <br />
             <br />
             Follow me on{" "}
-            <a href="https://open.spotify.com/user/mr_borba?si=d9ef676df3bf4c0d">
+            <a
+              className="spotify-link"
+              href="https://open.spotify.com/user/mr_borba?si=d9ef676df3bf4c0d"
+              target="_blank"
+            >
               Spotify
             </a>{" "}
             to see what I'm listening, or add me on{" "}
-            <a href="https://steamcommunity.com/id/Ivanplays666/">Steam</a> so
-            we can enjoy some games together.
+            <a
+              className="steam-link"
+              href="https://steamcommunity.com/id/Ivanplays666/"
+              target="_blank"
+            >
+              Steam
+            </a>{" "}
+            so we can enjoy some games together.
             <br />
             <br />
             Studying about software development since february 2020, I'm focused
@@ -151,6 +162,15 @@ const LandingPage = () => {
             </TechCard>
           </TechIconsContainer>
         </MyStacksContainer>
+        <ProjectsContainer>
+          <StyledTitle>
+            <span>&lt;</span>
+            Projects
+            <span>/&gt;</span>
+          </StyledTitle>
+          <HorizontalLine position="center" />
+          <p>Some of my favourites (and best) projects</p>
+        </ProjectsContainer>
       </SecondSectionContainer>
     </>
   );
