@@ -157,7 +157,7 @@ const LandingPage = () => {
             </TechCard>
           </TechIconsContainer>
         </MyStacksContainer>
-        <ProjectsContainer>
+        <ProjectsContainer id="projects">
           <StyledTitle>
             <span>&lt;</span>
             Projects

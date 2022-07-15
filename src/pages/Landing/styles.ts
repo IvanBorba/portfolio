@@ -180,7 +180,6 @@ export const MyStacksContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
-  margin-bottom: 10vh;
 `;
 
 export const TechIconsContainer = styled.div`
@@ -243,6 +242,7 @@ export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 10vh;
 
   p {
     width: 65vw;
