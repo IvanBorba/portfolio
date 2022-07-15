@@ -11,7 +11,9 @@ const Header = () => {
         <a href="Ivan-BorbaCV.pdf" download>
           Resume
         </a>
-        <StyledContactLink>Contact me!</StyledContactLink>
+        <a href="https://linktr.ee/ivanborba" target="_blank">
+          <StyledContactLink>Contact me!</StyledContactLink>
+        </a>
       </nav>
     </StyledHeader>
   );
