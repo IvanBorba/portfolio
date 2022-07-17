@@ -52,16 +52,18 @@ const TechCard = ({ children, color }: TechCardProps) => {
     }
   };
 
+  const normalizeCard = () => {
+    if (card.current) {
+      card.current.style.transform = `scale3d(1, 1, 1)`;
+    }
+  };
+
   return (
     <StyledCard
       shadowColor={color}
       ref={card}
       onMouseMove={animateCard}
-      onMouseLeave={() => {
-        if (card.current) {
-          card.current.style.transform = `scale3d(1, 1, 1)`;
-        }
-      }}
+      onMouseLeave={normalizeCard}
     >
       {children}
     </StyledCard>
