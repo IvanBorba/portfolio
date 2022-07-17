@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import { VscGithub } from "react-icons/vsc";
 import {
   IoLogoLinkedin,
@@ -32,6 +31,7 @@ import profileImage from "../../assets/images/profile.jpg";
 import * as TechIcons from "../../assets/icons";
 import Footer from "../../components/Footer";
 import TechCard from "../../components/TechCard";
+import ProjectsCarousel from "../../components/ProjectsCarousel";
 
 const LandingPage = () => {
   return (
@@ -168,6 +168,7 @@ const LandingPage = () => {
           </StyledTitle>
           <HorizontalLine position="center" />
           <p>Some of my favourites (and best) projects</p>
+          <ProjectsCarousel />
         </ProjectsContainer>
       </SecondSectionContainer>
       <Footer />
