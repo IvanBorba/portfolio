@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   box-sizing: border-box;
 
   h1 {
-    color: #d2d2d2;
+    color: #ffffff;
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: 400;
