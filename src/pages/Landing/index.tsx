@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { VscGithub } from "react-icons/vsc";
 import {
   IoLogoLinkedin,
@@ -21,20 +22,22 @@ import {
   HorizontalLine,
   MyStacksContainer,
   TechIconsContainer,
-  TechCard,
   ProjectsContainer,
   IconContainer,
+  BlurBgBall,
 } from "./styles";
 
 import profileImage from "../../assets/images/profile.jpg";
 
 import * as TechIcons from "../../assets/icons";
 import Footer from "../../components/Footer";
+import TechCard from "../../components/TechCard";
 
 const LandingPage = () => {
   return (
     <>
       <Header />
+      <BlurBgBall top="-15%" left="-2%" />
       <MainContainer>
         <SideColumn>
           <VerticalLine small />
@@ -125,34 +128,34 @@ const LandingPage = () => {
           </StyledTitle>
           <HorizontalLine position="right" />
           <TechIconsContainer>
-            <TechCard shadowColor="yellow">
+            <TechCard color="yellow">
               <TechIcons.JavascriptIcon />
             </TechCard>
-            <TechCard shadowColor="blue">
+            <TechCard color="blue">
               <TechIcons.TypescriptIcon />
             </TechCard>
-            <TechCard shadowColor="orange">
+            <TechCard color="orange">
               <TechIcons.HtmlIcon />
             </TechCard>
-            <TechCard shadowColor="blue">
+            <TechCard color="blue">
               <TechIcons.CssIcon />
             </TechCard>
-            <TechCard shadowColor="blue">
+            <TechCard color="blue">
               <TechIcons.ReactIcon />
             </TechCard>
-            <TechCard shadowColor="green">
+            <TechCard color="light-green">
               <TechIcons.NodeIcon />
             </TechCard>
-            <TechCard shadowColor="red">
+            <TechCard color="red">
               <TechIcons.NestIcon />
             </TechCard>
-            <TechCard shadowColor="blue">
+            <TechCard color="blue">
               <TechIcons.PostgresIcon />
             </TechCard>
-            <TechCard shadowColor="green">
+            <TechCard color="green">
               <TechIcons.MongoIcon />
             </TechCard>
-            <TechCard shadowColor="orange">
+            <TechCard color="orange">
               <TechIcons.GitIcon />
             </TechCard>
           </TechIconsContainer>

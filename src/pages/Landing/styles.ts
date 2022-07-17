@@ -8,8 +8,9 @@ interface HorizontalLineProps {
   position?: "center" | "right";
 }
 
-interface TechCardProps {
-  shadowColor?: "blue" | "orange" | "yellow" | "green" | "red";
+interface BlurBgBallProps {
+  top: string;
+  left: string;
 }
 
 export const VerticalLine = styled.hr`
@@ -188,54 +189,6 @@ export const TechIconsContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-export const TechCard = styled.div`
-  width: 9vw;
-  height: 16vh;
-  margin: 1.9vw;
-  padding: 1vh 1vw;
-  border: 1px solid #d2d2d2;
-  border-radius: 10px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  box-shadow: 0 8px 24px 0 rgba(100, 100, 100, 0.25);
-
-  ${(props: TechCardProps) =>
-    props.shadowColor === "blue" &&
-    css`
-      box-shadow: 0 8px 24px 0 rgba(0, 122, 204, 0.25);
-    `};
-
-  ${(props: TechCardProps) =>
-    props.shadowColor === "green" &&
-    css`
-      box-shadow: 0 8px 24px 0 rgba(87, 174, 71, 0.25);
-    `};
-
-  ${(props: TechCardProps) =>
-    props.shadowColor === "yellow" &&
-    css`
-      box-shadow: 0 8px 24px 0 rgba(240, 219, 79, 0.25);
-    `};
-
-  ${(props: TechCardProps) =>
-    props.shadowColor === "orange" &&
-    css`
-      box-shadow: 0 8px 24px 0 rgba(243, 79, 41, 0.25);
-    `};
-
-  ${(props: TechCardProps) =>
-    props.shadowColor === "red" &&
-    css`
-      box-shadow: 0 8px 24px 0 rgba(223, 35, 79, 0.25);
-    `};
-`;
-
 export const ProjectsContainer = styled.div`
   width: 64vw;
   height: 64vh;
@@ -260,4 +213,21 @@ export const IconContainer = styled.a`
   &:first-child {
     color: "#d2d2d2";
   }
+`;
+
+export const BlurBgBall = styled.div`
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: rgba(20, 111, 194, 0.7);
+  filter: blur(212px);
+  filter: blur(72px);
+
+  ${(props: BlurBgBallProps) =>
+    props &&
+    css`
+      top: ${props.top};
+      left: ${props.left};
+    `}
 `;
