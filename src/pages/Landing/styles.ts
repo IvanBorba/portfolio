@@ -116,7 +116,7 @@ export const ScrollCta = styled.span`
 
 export const SecondSectionContainer = styled.section`
   width: 100%;
-  height: 220vh;
+  height: 204vh;
   display: flex;
   flex-direction: column;
   align-items: center;
